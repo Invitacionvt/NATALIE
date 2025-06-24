@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIS 18</title>
+
+  <link rel="stylesheet" href="es.css" />
+
+  <!-- Tipografías decorativas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo:wght@400&display=swap" rel="stylesheet" />
+  
+</head>
+<body>
+  <section id="main">
+    <header id="header">
+      <nav>
+        <img class="logo" src="img/1.png" alt="imagen no encontrada" />
+        <h1 class="titulo">Mis 18 años</h1>
+        <h2 class="nombre">NATALIE CAROLINA </h2>
+      </nav>
+    </header>
+
+    <div class="mensaje">
+      <p>¡Por fin 18!<br />
+      Es momento de celebrar a lo grande este nuevo comienzo.<br />
+      Te invito a ser parte de esta noche especial,<br />
+      ¡porque no se cumplen 18 todos los días!</p>
+    </div>
+
+    <img class="imagen-destacada" src="img/2.jpeg" alt="imagen no encontrada" />
+
+    <div class="fecha"><b>01 de Agosto del 2025</b></div>
+
+    <p id="demo" class="cuenta-regresiva"></p>
+
+     <div class="padres">
+      <strong>Padres:</strong>
+      <p>Esperanza Brito Caro<br />
+        
+       Fernando Flores Navarro</p>
+    </div>
+    <div class="padres">
+      <strong>Padrinos:</strong>
+      <p>Zaira Morales Aguilar<br />
+        César Hernández Caro</p>
+    </div>
+
+
+    <article class="itinerario">
+      <h2 class="int">Itinerario</h2>
+
+
+      <div class="evento">
+        <h4>Evento Religioso</h4>
+        <img class="icono" src="img/iglesia.png" alt="iglesia" />
+        <p>
+          Parroquia "María Reina de la paz" <br />
+          18:00 hrs<br />
+          Villa Encantada, 72440<br />
+          Puebla, Pue.
+        </p>
+        <a class="boton" href="https://www.google.com/maps/place/Parroquia+%22Mar%C3%ADa+Reina+de+la+paz%22/@19.0182008,-98.2197389,17z/data=!3m1!4b1!..." target="_blank">CÓMO LLEGAR</a>
+      </div>
+
+<img class="imagen-destacada" src="img/sep.jpeg" alt="imagen no encontrada" />
+       
+      <div class="evento">
+        <h4>Recepción</h4>
+        <img class="icono" src="img/cop.png" alt="copa" />
+        <p>
+          Salón Luzcina - Hotel Posada Señorial <br />
+          20:00 hrs<br />
+          AV 5 de Mayo 1400, San Juan Aquiahuac<br />
+          San Andrés Cholula, Puebla
+        </p>
+        <a class="boton" href="https://www.google.com/maps/place/Salon+Jardin+Invernadero/@19.0010326,-98.2210909..." target="_blank">CÓMO LLEGAR</a>
+      </div>
+
+      <div class="regalo">
+        <p>
+          Para nosotros el mejor regalo es tu presencia,<br />
+          pero si lo deseas, te dejo esta opción:
+        </p>
+        <a class="boton" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51708496" target="_blank">MESA DE REGALOS LIVERPOOL</a>
+        <p class="clic">(CLIC PARA VER DETALLES)</p>
+      </div>
+
+      <h3 class="confirmar">CONFIRMAR POR WHATSAPP</h3>
+      <a class="asistencia" href="https://wa.me/2224556850?text=Confirmo%20mi%20asistencia">¡Escríbenos!</a>
+    </article>
+
+    <footer>
+      <p class="autor">Autor: VTG | Contacto: 2215772377</p>
+    </footer>
+  </section>
+
+  <script>
+    const countDownDate = new Date("August 01, 2025 08:00:00").getTime();
+    const demo = document.getElementById("demo");
+
+    const x = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      demo.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(x);
+        demo.innerHTML = "¡YA EMPEZÓ LA FIESTA!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
