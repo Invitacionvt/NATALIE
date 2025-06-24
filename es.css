@@ -1,0 +1,158 @@
+:root {
+  --rosa-oro: #b76e79;
+  --rosa-suave: #fcb4d5;
+  --blanco: #fffafc;
+  --texto: #5e2c37;
+  --fondo: #fff0f5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Caprasimo', cursive;
+  color: var(--texto);
+  text-align: center;
+  background-image: url("img/fond.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+.logo {
+  width: 150px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.titulo {
+  font-size: 4.5rem;
+  margin: 10px 0;
+  font-family: 'Montez', cursive;
+  color: var(--rosa-oro);
+}
+
+.nombre {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #a15665;
+}
+
+.int {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #a15665;
+}
+
+.mensaje p {
+  background-color: rgba(252, 180, 213, 0.3);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  color: var(--texto);
+}
+
+.imagen-destacada {
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(183, 110, 121, 0.3);
+}
+
+.fecha {
+  font-size: 1.4rem;
+  color: var(--rosa-oro);
+  margin: 10px 0;
+}
+
+.cuenta-regresiva {
+  font-size: 2rem;
+  background-color: #f8d7dd;
+  color: var(--texto);
+  width: fit-content;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.padres {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.itinerario {
+  padding: 20px;
+}
+
+.evento {
+  margin: 30px auto;
+  max-width: 600px;
+  background-color: #fff4f7;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(183, 110, 121, 0.2);
+}
+
+.icono {
+  width: 40px;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--rosa-suave);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.boton:hover {
+  background-color: var(--rosa-oro);
+}
+
+.regalo p {
+  margin-top: 10px;
+}
+
+.clic {
+  font-size: 0.9rem;
+  color: #aa7e88;
+}
+
+.confirmar {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  color: #a15665;
+}
+
+.asistencia {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  background-color: var(--rosa-oro);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.asistencia:hover {
+  background-color: #8b4c58;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fcefee;
+  font-size: 0.9rem;
+  border-top: 2px solid #e0b0b0;
+}
+
+.autor {
+  color: #a58d92;
+}
