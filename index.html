@@ -21,7 +21,7 @@
       <nav>
         <img class="logo" src="img/31.jpg" alt="imagen no encontrada" />
         <h1 class="titulo">Mis 18 años</h1>
-        <h2 class="nombre">NATALIE CAROLINA </h2>
+        <h2 class="nombre">NATALIE CAROLINA FLORES BRITO</h2>
       </nav>
     </header>
 
@@ -36,7 +36,25 @@
 
     <div class="fecha"><b>01 de Agosto del 2025</b></div>
 
-    <p id="demo" class="cuenta-regresiva"></p>
+   <div class="cuenta-regresiva-container" id="contador">
+  <div class="cuenta-item">
+    <div class="cuenta-numero" id="days">00</div>
+    <div class="cuenta-label">Días</div>
+  </div>
+  <div class="cuenta-item">
+    <div class="cuenta-numero" id="hours">00</div>
+    <div class="cuenta-label">Horas</div>
+  </div>
+  <div class="cuenta-item">
+    <div class="cuenta-numero" id="minutes">00</div>
+    <div class="cuenta-label">Min</div>
+  </div>
+  <div class="cuenta-item">
+    <div class="cuenta-numero" id="seconds">00</div>
+    <div class="cuenta-label">Seg</div>
+  </div>
+</div>
+
 
      <div class="padres">
       <strong>Padres:</strong>
@@ -73,7 +91,7 @@
         <img class="icono" src="img/cop.png" alt="copa" />
         <p>
         Salón el Invernadero.  <br />
-          18:00 hrs<br />
+          20:00 hrs<br />
            Prol. de la 2 Sur 6522, <br />
           Lomas del Sur, 72470<br />
           Heroica Puebla de Zaragoza, Pue.<br />
@@ -101,25 +119,29 @@
   </section>
 
   <script>
-    const countDownDate = new Date("August 01, 2025 08:00:00").getTime();
-    const demo = document.getElementById("demo");
+  const countdown = () => {
+    const targetDate = new Date("2025-08-01T20:00:00");
+    const now = new Date();
+    const diff = targetDate - now;
 
-    const x = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
+    if (diff <= 0) {
+      document.getElementById("contador").innerHTML = "<h2>¡Ya empezó la fiesta! 🎉</h2>";
+      return;
+    }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
 
-      demo.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    document.getElementById("days").textContent = String(days).padStart(2, '0');
+    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+  };
 
-      if (distance < 0) {
-        clearInterval(x);
-        demo.innerHTML = "¡YA EMPEZÓ LA FIESTA!";
-      }
-    }, 1000);
-  </script>
+  setInterval(countdown, 1000);
+</script>
+
 </body>
 </html>
