@@ -156,3 +156,44 @@ footer {
 .autor {
   color: #a58d92;
 }
+
+
+.cuenta-regresiva-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  text-align: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.cuenta-item {
+  background: #ffffffcc;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  font-family: 'Caprasimo', cursive;
+  color: #b76e79;
+}
+
+.cuenta-item:hover {
+  transform: scale(1.05);
+}
+
+.cuenta-numero {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.cuenta-label {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cuenta-regresiva-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
